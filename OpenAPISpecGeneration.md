@@ -34,7 +34,7 @@ An OpenAPI spec is to be generated from this API, ideally in a fully automated f
 
 ## Solutions in Detail
 
-1. ### Generate from Seeded Database
+### Generate from Seeded Database
 
 **Steps**
 1. Write a comprehensive set of model factories in Laravel.
@@ -55,7 +55,7 @@ An OpenAPI spec is to be generated from this API, ideally in a fully automated f
 - This is likely to be a complex endeavour and once completed, most of the code won't be used again. It is possible that the code could be reused for generating OpenAPI specs for any prototype projects the company is working on, or it could be open-sourced for the PHP community if made more general.
 - This solution is a little bit uncertain in terms of how much functionality can actually be inferred from the database and probing of the endpoints. Some non-obvious states and responses are likely to be missed.
 
-2. ### Generate with Docs Converter
+### Generate with Docs Converter
 
 **Steps**
 1. Assess the legacy docs' conformance with reality and make good any defects.
@@ -70,7 +70,7 @@ An OpenAPI spec is to be generated from this API, ideally in a fully automated f
 - Making good the legacy docs provides a valid source of truth for API consumers, even if it is for an interim period.
 - Legacy docs might be too incompatible with the OpenAPI structure for this to be a worthwhile endeavour.
 
-3. ### Generate from HAR File
+### Generate from HAR File
 
 **Steps**
 1. A developer or QA operative with significant domain knowledge navigates the site in a comprehensive fashion, executing valid and invalid requests and capturing these in a HAR file, or a developer uses the routes file to generate a collection of Postman requests that can be run against the API to generate a HAR file or even the OpenAPI spec itself.
@@ -82,7 +82,7 @@ An OpenAPI spec is to be generated from this API, ideally in a fully automated f
 - Some API functionality is difficult to model in a front-end and may require significant additional setup for the database to reach a state in which a test can be done.
 - The first step can potentially be outsourced to QA, which may be more cost-effective.
 
-4. ### Generate Using Attributes and Package
+### Generate Using Attributes and Package
 
 **Steps**
 1. Learn how to use the [package](https://github.com/vyuldashev/laravel-openapi)
@@ -96,7 +96,7 @@ An OpenAPI spec is to be generated from this API, ideally in a fully automated f
 - This requires the learning of a Domain Specific Language in addition or instead of the OpenAPI spec itself.
 - This creates a hard dependency on the package above as it would be relatively painful to remove all the attributes.
 
-5. ### Create Manually
+### Create Manually
 
 **Steps**
 1. Draw up component schemas for all Models in the framework.
