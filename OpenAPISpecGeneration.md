@@ -23,9 +23,13 @@ An OpenAPI spec is to be generated from this API, ideally in a fully automated f
 ## Solutions in Summary
 
 [1.](#generate-from-seeded-database) Generate the documentation by utilising Laravel's seeders and factories to create a comprehensive database state, i.e. a state in which realistic variations of each individual model and its relations are represented. Model specs can be introspected from this database and routes can be probed to assess the structure of responses the API will provide to standard REST operations.
+
 [2.](#generate-with-docs-converter) Generate the documentation by writing a converter for the legacy docs to the OpenAPI spec. As the legacy docs are out of step with the latest API, additional functionality or variations to existing functionality must be detailed through manual editing.
+
 [3.](#generate-from-har-file) Use a tool (browser extension or Postman etc.) to generate a HAR file capturing a comprehensive set of requests to the API and its responses to these. These requests are to be generated in-app through navigation and form-filling. A spec file can then be generated from this HAR file (a variety of tools exist to do this generation).
+
 [4.](#generate-using-attributes-and-package) This [package](https://github.com/vyuldashev/laravel-openapi) provides for the automatic generation of OpenAPI documentation once Controller methods and classes are appropriately decorated with attributes.
+
 [5.](#create-manually) Write the spec manually based on the legacy docs, the current database structure and the conventions followed in a representative subset of the controllers.
 
 ## Solutions in Detail
