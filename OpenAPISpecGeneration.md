@@ -1,6 +1,6 @@
 # OpenAPI Spec Generation Proposal
 
-This is a document outlining a proposal for the generation of an OpenAPI spec from an existing Laravel API (The company's API).
+This is a document outlining a proposal for the generation of an OpenAPI spec from an existing Laravel API (The Upmind API).
 
 The author of this document would choose Solution 1 but has presented the other options for completeness.
 
@@ -16,7 +16,7 @@ Variations and additions to the spec file can effectively be used as requirement
 
 ## The Problem Space
 
-The spec is to be generated for a Laravel API with some legacy documentation and a low level of test coverage. It is unknown whether the company's API has Model Factories or Seeders configured for its current database. It is assumed that these are either not in place or incomplete. The legacy documentation is not in a format easily convertible to OpenAPI. 
+The spec is to be generated for a Laravel API with some legacy documentation and a low level of test coverage. It is unknown whether the Upmind API has Model Factories or Seeders configured for its current database. It is assumed that these are either not in place or incomplete. The legacy documentation is not in a format easily convertible to OpenAPI. 
 
 An OpenAPI spec is to be generated from this API, ideally in a fully automated fashion.
 
